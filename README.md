@@ -1,7 +1,10 @@
 To install this script: [with root privilege]
- Edit the script to change the path of the location of codeBeamer MR and the user that it was installed under.
- Copy to /etc/init.d
- chmod +x /etc/init.d/cmr-svn
+
+1. Edit the script to change the path of the location of codeBeamer MR and the user that it was installed under.
+
+2. Copy to /etc/init.d
+
+3. chmod +x /etc/init.d/cmr-svn
  
 To start the script:
 /etc/init.d/cmr-svn start
