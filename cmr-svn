@@ -1,0 +1,34 @@
+#!/bin/sh
+# Author: Steven Hicks
+# This script may not be redistributed in commerical software without prior permission
+# and crediting. The author assumes no risk on how this script may be used, or warranty.
+# Starts/stops/restarts/status codeBeamer Managed Repositories
+
+USER=xbmc
+CMR_PATH=/opt/cmr/bin
+
+case "$1" in
+start)
+	echo "Starting CMR...."
+        start-stop-daemon  --user "${USER}" --chuid "${USER}" --start --exec ${CMR_PATH}/startup
+		
+;;
+
+stop)
+	echo "Stopping CMR...."
+        start-stop-daemon  --user "${USER}" --chuid "${USER}" --start --exec ${CMR_PATH}/stop
+;;
+
+restart)
+	echo "Restarting CMR....."
+        start-stop-daemon  --user "${USER}" --chuid "${USER}" --start --exec ${CMR_PATH}/restart
+;;
+status)
+        start-stop-daemon  --user "${USER}" --chuid "${USER}" --start --exec ${CMR_PATH}/status
+;;
+*)
+        echo "cmr-svn\nOptions\tstart\n\tstop\n\trestart\n\tstatus"
+;;
+
+esac
+
