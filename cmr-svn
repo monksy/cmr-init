@@ -4,7 +4,7 @@
 # and crediting. The author assumes no risk on how this script may be used, or warranty.
 # Starts/stops/restarts/status codeBeamer Managed Repositories
 
-USER=xbmc
+USER=[INSERT USER HERE]
 CMR_PATH=/opt/cmr/bin
 
 case "$1" in
